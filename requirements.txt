@@ -1,0 +1,8 @@
+streamlit #-- To run the web app , create a virtual environment and install the requirements
+requests #-- This module is used to make API calls
+numpy #-- To read and write data
+pandas #-- To read and write data
+plotly #-- To visualize data we will use plotly package
+nbformat #-- To display graphs from plotly
+ipykernel #-- to run the jupyter notebook
+# this contains folder structure and file names

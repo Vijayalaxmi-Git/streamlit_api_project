@@ -1,0 +1,18 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always"
+    }
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "jupyter.askForKernelRestart": false,
+  "notebook.formatOnCellExecution": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "explicit"
+  },
+  "notebook.formatOnSave.enabled": true
+}
