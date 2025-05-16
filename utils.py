@@ -22,8 +22,18 @@ class StockAPI:
             "function": "SYMBOL_SEARCH",
         }
         response = requests.get(url=self.url, headers=self.headers, params=querystring)
-        data = response.json()["bestMatches"]
-        return pd.DataFrame(data)
+        try:
+            data = response.json()
+        except ValueError:
+            print("Error: Response is not valid JSON.")
+            return pd.DataFrame()
+
+        if "bestMatches" in data:
+            return pd.DataFrame(data["bestMatches"])
+        else:
+            print("Warning: 'bestMatches' not found in response.")
+            print("Full response:", data)
+            return pd.DataFrame()
 
     def stock_data(self, symbol: str) -> pd.DataFrame:
         querystring = {

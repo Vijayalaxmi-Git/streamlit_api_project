@@ -24,6 +24,7 @@ if company:
     company_details = r1[r1["1. symbol"] == dropdown]
     st.dataframe(company_details)
 
+
     # Create a submit button
     submit = st.button("Submit", type="primary")
 
